@@ -5,5 +5,5 @@ platform(
 
 cc_binary(
     name = "repro",
-    target_compatible_with = [":baremetal"],
+    target_compatible_with = ["@platforms//os:none"],
 )
