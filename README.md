@@ -8,9 +8,11 @@ Build time: Thu Jan 21 07:33:24 2021 (1611214404)
 Build timestamp: 1611214404
 Build timestamp as int: 1611214404
 $ bazel build //...
-Analyzing: target //:some-rule (1 packages loaded, 0 targets configured)
+Starting local Bazel server and connecting to it...
+Analyzing: target //:repro (9 packages loaded, 11 targets configured)
+    currently loading: @bazel_tools//tools/sh
 FATAL: bazel crashed due to an internal error. Printing stack trace:
-java.lang.RuntimeException: Unrecoverable error while evaluating node 'ConfiguredTargetKey{label=//:some-rule, config=BuildConfigurationValue.Key[86d23d2b5aedbeecfc6e6954ea9486ec39e9e40bcbc4b17cec46a06eed198d11]}' (requested by nodes )
+java.lang.RuntimeException: Unrecoverable error while evaluating node 'ConfiguredTargetKey{label=//:repro, config=BuildConfigurationValue.Key[86d23d2b5aedbeecfc6e6954ea9486ec39e9e40bcbc4b17cec46a06eed198d11]}' (requested by nodes )
         at com.google.devtools.build.skyframe.AbstractParallelEvaluator$Evaluate.run(AbstractParallelEvaluator.java:563)
         at com.google.devtools.build.lib.concurrent.AbstractQueueVisitor$WrappedRunnable.run(AbstractQueueVisitor.java:398)
         at java.base/java.util.concurrent.ForkJoinTask$AdaptedRunnableAction.exec(Unknown Source)

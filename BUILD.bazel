@@ -1,11 +1,9 @@
-load("//:rule.bzl", "my_little_rule")
-
 platform(
     name = "baremetal",
     constraint_values = ["@platforms//os:none"],
 )
 
-my_little_rule(
-    name = "some-rule",
+cc_binary(
+    name = "repro",
     target_compatible_with = [":baremetal"],
 )
